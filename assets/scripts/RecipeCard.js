@@ -129,9 +129,9 @@ class RecipeCard extends HTMLElement {
     }
     else{
       const rating_b = document.createElement('span');
-      rating_b.textContent=Math.round(ratingvalue);
+      rating_b.textContent=Math.round(ratingvalue * 100) / 100;
       const rating_img=document.createElement('img');
-      rating_img.setAttribute('src','/assets/images/icons/'+Math.round(ratingvalue)+"-star.svg");
+      rating_img.setAttribute('src','assets/images/icons/'+Math.round(ratingvalue)+"-star.svg");
       rating_img.setAttribute('alt',Math.round(ratingvalue)+'stars');
       const rating_c=document.createElement('span');
       rating_c.textContent=searchForKey(data, "ratingCount");
